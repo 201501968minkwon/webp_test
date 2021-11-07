@@ -1,0 +1,10 @@
+* {margin:0;padding:0;}
+.bannner {position:relative;display:inline-block;}
+.bannner img {max-width:100%;}
+.bannner span.text {position:absolute;top:50%;left:0;transform:translateY(-50%);display:none;width:100%;font-size:70px;color:#fff;font-weight:900;text-align:center;}
+.bannner::before, .bannner::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);transition:all .8s;-webkit-transition:all .8s;}
+.bannner::before {width:97%;height:95%;border-top:3px solid #fff;border-bottom:2px solid #fff;width:0;}
+.bannner::after {width:97%;height:95%;border-left:3px solid #fff;border-right:2px solid #fff;height:0;}
+.bannner:hover span.text {display:block;}
+.bannner:hover::before {width:calc(97% + 4px);}
+.bannner:hover::after {height:calc(95% + 4px);}
